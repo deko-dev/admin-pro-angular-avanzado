@@ -8,11 +8,11 @@ import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'dashboard',
     component: PagesComponent,
     children: [
       {
-        path: 'dashboard',
+        path: '',
         component: DashboardComponent,
       },
       {
@@ -23,15 +23,6 @@ const routes: Routes = [
         path: 'grafica1',
         component: GraficaOneComponent
       },
-      {
-        path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: '**',
-        component: NopagefoundComponent
-      }
     ]
   },
 ];

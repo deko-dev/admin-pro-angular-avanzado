@@ -22,6 +22,12 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     PagesRoutingModule,
     SharedModule
+  ],
+  exports: [
+    DashboardComponent,
+    ProgressComponent,
+    GraficaOneComponent,
+    PagesComponent,
   ]
 })
 export class PagesModule { }
