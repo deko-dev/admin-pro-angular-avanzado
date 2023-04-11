@@ -1,1 +1,46 @@
-<p>progress works!</p>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Animated Striped bar</h4>
+        <div class="progress m-t-30">
+          <div
+            class="progress-bar bg-primary active progress-bar-striped"
+            style="height: 8px"
+            role="progressbar"
+            [style.width]="getPercentOne"
+          >
+            <span class="sr-only">60% Complete</span>
+          </div>
+        </div>
+        <div class="progress m-t-30">
+          <div
+            class="progress-bar bg-secondary active progress-bar-striped"
+            style="height: 8px"
+            role="progressbar"
+            [style.width]="getPercentTwo"
+          >
+            <span class="sr-only">60% Complete</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <app-progress-bar [progress]="progressOne" (outValue)=" progressOne = $event "></app-progress-bar>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <app-progress-bar [progress]="progressTwo" (outValue)=" progressTwo = $event "></app-progress-bar>
+      </div>
+    </div>
+  </div>
+</div>
